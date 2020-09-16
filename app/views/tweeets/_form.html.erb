@@ -1,4 +1,6 @@
-<%= form_with(model: tweeet, local: true) do |form| %>
+<%
+=begin%>
+ <%= form_with(model: tweet, local: true) do |form| %>
   <% if tweeet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tweeet.errors.count, "error") %> prohibited this tweeet from being saved:</h2>
@@ -19,4 +21,6 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+<% end %> 
+<%
+=end%>
