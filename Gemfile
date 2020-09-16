@@ -2,6 +2,14 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
+gem 'better_errors', '~> 2.8'
+gem 'guard', '~> 2.16', '>= 2.16.2'
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+gem 'bulma-rails', '~> 0.9.0'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
