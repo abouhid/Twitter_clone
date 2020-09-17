@@ -1,28 +1,29 @@
 <div class="column is-half">
-    <article class="media box">
-        <figure class="media-left">
-            <p class="image is-64x64">
-						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
-            </p>
-        </figure>
-        <div class="media-content">
-            <%= render 'tweeets/form' %>
-        </div>
-    </article>
-
+  <% if user_signed_in? %>
+	<article class="media box">
+		<figure class="media-left">
+			<p class="image is-64x64">
+				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+			</p>
+		</figure>
+		<div class="media-content">
+			 <%= render 'tweeets/form' %>
+		</div>
+	</article>
+  <% end %>
 <% @tweeets.each do |tweeet| %>
     <div class="box">
         <article class="media">
             <div class="media-left">
-                <figure class="image is-64x64">
-						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
-                </figure>
+            <figure class="image is-64x64">
+  				<%= gravatar_image_tag(tweeet.user.email, size: 64, alt: tweeet.user.name) %>
+  			</figure>
             </div>
             <div class="media-content">
                 <div class="content">
-                    <strong> <%= @tweeets %> </strong><br>
-                    <small> @xxxxxx </small><br>
-                    <p><%= tweeet.tweeet %></p>
+                    	<strong><%= tweeet.user.name %></strong><br />
+  				<small><%= tweeet.user.username %></small><br/>
+  				<p><%= tweeet.tweeet %></p>
                 </div>
                 <nav class="level">
                     <div class="level-left is-mobile">
