@@ -39,7 +39,7 @@
           <div class="navbar-item">
 					<div class="field is-grouped">
 						<p class="control">
-							<%= link_to 'New Tweeet', root_path, class: "button is-primary is-inverted" %>
+							<%= link_to 'New Tweeet', new_tweeet_path , class: "button is-primary is-inverted" %>
 						</p>
             <% if user_signed_in? %>
               <p class="control user_name">
