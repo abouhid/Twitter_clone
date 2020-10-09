@@ -5,10 +5,12 @@
  - Log in/out;
  - Sign in/Sign up;
 
+![Screenshot](Index.png)
 
 ## Built With
 
 - Ruby on Rails version 6.0
+
 
 ### Prerequisites
 
